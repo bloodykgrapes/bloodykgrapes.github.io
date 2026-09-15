@@ -1,0 +1,166 @@
+<!DOCTYPE html5>
+
+<html lang="ru">
+
+<head>
+    <title>Задание 1</title>
+</head>
+
+<body>
+
+    <h2>Список маркированных ссылок</h2>
+
+    <ul>
+        <li> <a href="http://kubsu.ru">Перейти на страницу КубГУ</a> </li>
+        <li> <a href="https://kubsu.ru">Перейти на страницу КубГУ (протокол https)</a> </li>
+        <li> <a href="https://kubsu.ru"> <img src="/image.jpg" alt="Описание картинки" width="224" height="168"> </a> </li>
+        <li> <a href="in/page.html">Перейти на внутреннюю страницу</a> </li>
+        <li> <a href="/">Ссылка на главную страницу</a> </li>
+        <li> <a href="#button-submit">Ссылка на фрагмент страницы</a> </li>
+        <li> <a href="https://www.kubsu.ru/ru/search/content?keys=направления&amp;param1=value&amp;param2=value">Ссылка с тремя параметрами</a> </li>
+        <li> <a href="https://kubsu.ru?id=404">Ссылка с параметром ID</a> </li>
+        <li> <a href="./page.html">Страница в текущем каталоге</a> </li>
+        <li> <a href="/about/contacts.html">Страница в каталоге about</a> </li>
+        <li> <a href="../page.html">Страница в каталоге на 1 уровень выше</a> </li>
+        <li> <a href="../../page.html">Страница в каталоге на 2 уровня выше</a> </li>
+        <li> <p> Пример абзаца, внутри которого находится <a href="https://kubsu.ru">контекстная ссылка</a>. </p> </li>
+        <li> <a href="https://kubsu.ru/index.php#region-footer-second">Ссылка на фрагмент страницы стороннего сайта</a></li>
+        <li> 
+            <img src="/image.jpg" alt="Описание картинки" width="224" height="168" usemap="#image-map">
+            <map name="image-map">
+                <area shape="rect" coords="10,10,100,100" href="https://kubsu.ru"/>
+                <area shape="circle" coords="200,75,40" href="https://kubsu.ru/index.php"/>
+            </map>
+        </li>
+        <li> <a href="">Ссылка с пустым href</a> </li>
+        <li> <a>Ссылка без href</a> </li>
+        <li> <a href="https://kubsu.ru" rel="nofollow">Ссылка по которой запрещён переход поисковикам</a> </li>
+        <li> <a href="https://kubsu.ru" rel="noindex">Ссылка запрещённая для индексации поисковиками</a> </li>
+        <li>
+            <ol>
+                <li> <a href="https://kubsu.com" title="Подпись 1">Ссылка 1</a> </li>
+                <li> <a href="https://kubsu.com" title="Подпись 2">Ссылка 2</a> </li>
+                <li> <a href="https://kubsu.com" title="Подпись 3">Ссылка 3</a> </li>
+            </ol>
+        </li>
+        <li> <a href="ftp://user:password@server.ru/file.zip">Ссылка на файл на сервере FTP с авторизацией</a> </li>
+    </ul>
+
+    <h2>Форма для заполнения</h2>
+    <form>
+
+        <label>
+            ФИО:
+            <br>
+            <input name="field-fio" placeholder="Фамилия Имя Отчество">
+        </label>
+        <br>
+
+        <label>
+            Номер телефона:
+            <br>
+            <input name="field-phone" placeholder="+7(999)123-45-67" type="tel">
+        </label>
+        <br>
+
+        <label>
+            Email:
+            <br>
+            <input name="field-email" placeholder="user@yandex.ru" type="email">
+        </label>
+        <br>
+
+        <label>
+            Email:
+            <br>
+            <input name="field-date" value="2000-01-01" type="date">
+        </label>
+        <br>
+
+        Пол:
+        <label>
+            <input name="field-gender" type="radio" checked="checked">
+            Мужской
+        </label>
+        <label>
+            <input name="field-gender" type="radio">
+            Женский
+        </label>
+        <br>
+
+        Любимые языки программирования:
+        <label>
+            <br>
+            <input name="field-language" type="checkbox">
+            Pascal
+        </label>
+        <label>
+            <br>
+            <input name="field-language" type="checkbox">
+            C
+        </label>
+        <label>
+            <br>
+            <input name="field-language" type="checkbox">
+            C++
+        </label>
+        <label>
+            <br>
+            <input name="field-language" type="checkbox">
+            JavaScript
+        </label>
+        <label>
+            <br>
+            <input name="field-language" type="checkbox">
+            PHP
+        </label>
+        <label>
+            <br>
+            <input name="field-language" type="checkbox">
+            Python
+        </label>
+        <label>
+            <br>
+            <input name="field-language" type="checkbox">
+            Java
+        </label>
+        <label>
+            <br>
+            <input name="field-language" type="checkbox">
+            Haskel
+        </label>
+        <label>
+            <br>
+            <input name="field-language" type="checkbox">
+            Clojure
+        </label>
+        <label>
+            <br>
+            <input name="field-language" type="checkbox">
+            Prolog
+        </label>
+        <label>
+            <br>
+            <input name="field-language" type="checkbox">
+            Scala
+        </label>
+        <br>
+
+        <label>
+            Обо мне:
+            <br>
+            <textarea name="field-about" placeholder="Расскажите о себе"></textarea>
+        </label>
+        <br>
+
+        <label>
+            С контрактом ознакомился
+            <input name="field-contract" type="checkbox">
+        </label>
+        <br>
+
+        <input id="button-submit" type="submit" value="Сохранить">
+
+    </form>
+
+</body>
