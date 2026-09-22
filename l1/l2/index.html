@@ -49,43 +49,37 @@
     <h2>Форма для заполнения</h2>
     <form>
 
-        <label>
-            ФИО:
-            <br>
-            <input name="field-fio" placeholder="Фамилия Имя Отчество">
-        </label>
+    <label>
+        ФИО:
         <br>
+        <input name="field-fio" placeholder="Фамилия Имя Отчество" pattern="^[A-Za-zА-Яа-яЁё]+(\s+[A-Za-zА-Яа-яЁё]+)+$" type="text" required>
+    </label>
+    <br>
 
-        <label>
-            Номер телефона:
-            <br>
-            <input name="field-phone" placeholder="+7(999)123-45-67" type="tel">
-        </label>
+    <label>
+        Номер телефона:
         <br>
+        <input name="field-phone" placeholder="+7(999)123-45-67" type="tel" pattern="^\+7\(\d{3}\)\d{3}-\d{2}-\d{2}$" required>
+    </label>
+    <br>
 
-        <label>
-            Email:
-            <br>
-            <input name="field-email" placeholder="user@yandex.ru" type="email">
-        </label>
+    <label>
+        Email:
         <br>
+        <input name="field-email" placeholder="user@yandex.ru" type="email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
+    </label>
+    <br>
 
-        <label>
-            Email:
-            <br>
-            <input name="field-date" value="2000-01-01" type="date">
-        </label>
+    <label>
+        Дата рождения:
         <br>
+        <input name="field-date" value="2000-01-01" type="date" pattern="^\d{4}-\d{2}-\d{2}$" required>
+    </label>
+    <br>
 
         Пол:
-        <label>
-            <input name="field-gender" type="radio" checked="checked">
-            Мужской
-        </label>
-        <label>
-            <input name="field-gender" type="radio">
-            Женский
-        </label>
+        <label><input name="field-gender" type="radio" checked="checked">Мужской</label>
+        <label><input name="field-gender" type="radio">Женский</label>
         <br>
 
         <label>
@@ -107,17 +101,10 @@
         </label>
         <br>
 
-        <label>
-            Обо мне:
-            <br>
-            <textarea name="field-about" placeholder="Расскажите о себе"></textarea>
-        </label>
+        <label>Обо мне:<br><textarea name="field-about" placeholder="Расскажите о себе"></textarea></label>
         <br>
 
-        <label>
-            С контрактом ознакомился
-            <input name="field-contract" type="checkbox">
-        </label>
+        <label>С контрактом ознакомился<input name="field-contract" type="checkbox" required></label>
         <br>
 
         <input id="button-submit" type="submit" value="Сохранить">
