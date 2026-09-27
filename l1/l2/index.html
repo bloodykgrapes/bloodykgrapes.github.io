@@ -24,7 +24,7 @@
         <li> <a href="../page.html">Страница в каталоге на 1 уровень выше</a> </li>
         <li> <a href="../../page.html">Страница в каталоге на 2 уровня выше</a> </li>
         <li> <p>Пример абзаца, внутри которого находится <a href="https://kubsu.ru">контекстная ссылка</a>.</p> </li>
-        <li> <a href="https://kubsu.ru/index.php#region-footer-second">Ссылка на фрагмент страницы стороннего сайта</a></li>
+        <li> <a href="https://kubsu.ru/index.php#region-footer-second">Ссылка на фрагмент страницы стороннего сайта</a> </li>
         <li> 
             <img src="/image.jpg" alt="Описание картинки" width="224" height="168" usemap="#image-map">
             <map name="image-map">
@@ -59,7 +59,7 @@
     <label>
         Номер телефона:
         <br>
-        <input name="field-phone" placeholder="+7(999)123-45-67" type="tel" pattern="^\+7\(\d{3}\)\d{3}-\d{2}-\d{2}$" required>
+        <input name="field-phone" placeholder="+7(999)123-45-67" type="tel" pattern="^\+7\d{10}$" required>
     </label>
     <br>
 
@@ -101,7 +101,7 @@
         </label>
         <br>
 
-        <label>Обо мне:<br><textarea name="field-about" placeholder="Расскажите о себе"></textarea></label>
+        <label>Обо мне:<br><textarea name="field-about" placeholder="Расскажите о себе" required></textarea></label>
         <br>
 
         <label>С контрактом ознакомился<input name="field-contract" type="checkbox" required></label>
