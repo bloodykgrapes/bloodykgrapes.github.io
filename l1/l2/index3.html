@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 3 - Адаптивный интерфейс</title>
+    <link rel="stylesheet" href="/style3.css">
+</head>
+
+<body>
+
+    <header id="header">
+        <div id="header-branding">
+            <img id="header-logo" src="/logo.png" alt="Логотип">
+            <span id="header-text">Название сайта</span>
+        </div>
+        
+        <nav id="header-menu">
+            <a href="#links" class="header-link">Ссылки</a>
+            <a href="#table" class="header-link">Таблица</a>
+            <a href="#form" class="header-link">Форма</a>
+        </nav>
+    </header>
+
+    <main class="content">
+        <div id="links" class="container">
+            <h2>Список маркированных ссылок</h2>
+            <ul>
+                <li> <a href="http://kubsu.ru">Перейти на страницу КубГУ</a> </li>
+                <li> <a href="https://kubsu.ru">Перейти на страницу КубГУ (протокол https)</a> </li>
+                <li> <a href="https://kubsu.ru"> <img src="/image.jpg" alt="Описание картинки" width="224" height="168"> </a> </li>
+                <li> <a href="in/page.html">Перейти на внутреннюю страницу</a> </li>
+                <li> <a href="/">Ссылка на главную страницу</a> </li>
+                <li> <a href="#button-submit">Ссылка на фрагмент страницы</a> </li>
+                <li> <a href="https://www.kubsu.ru/ru/search/content?keys=направления&amp;param1=value&amp;param2=value">Ссылка с тремя параметрами</a> </li>
+                <li> <a href="https://kubsu.ru?id=404">Ссылка с параметром ID</a> </li>
+                <li> <a href="./page.html">Страница в текущем каталоге</a> </li>
+                <li> <a href="/about/contacts.html">Страница в каталоге about</a> </li>
+                <li> <a href="../page.html">Страница в каталоге на 1 уровень выше</a> </li>
+                <li> <a href="../../page.html">Страница в каталоге на 2 уровня выше</a> </li>
+                <li> <p>Пример абзаца, внутри которого находится <a href="https://kubsu.ru">контекстная ссылка</a>.</p> </li>
+                <li> <a href="https://kubsu.ru/index.php#region-footer-second">Ссылка на фрагмент страницы стороннего сайта</a></li>
+                <li> 
+                    <img src="/image.jpg" alt="Описание картинки" width="224" height="168" usemap="#image-map">
+                    <map name="image-map">
+                        <area shape="rect" coords="10,10,100,100" href="https://kubsu.ru"/>
+                        <area shape="circle" coords="200,75,40" href="https://kubsu.ru/index.php"/>
+                    </map>
+                </li>
+                <li> <a href="">Ссылка с пустым href</a> </li>
+                <li> <a>Ссылка без href</a> </li>
+                <li> <a href="https://kubsu.ru" rel="nofollow">Ссылка по которой запрещён переход поисковикам</a> </li>
+                <li> <a href="https://kubsu.ru" rel="noindex">Ссылка запрещённая для индексации поисковиками</a> </li>
+                <li>
+                    <ol>
+                        <li> <a href="https://kubsu.com" title="Подпись 1">Ссылка 1</a> </li>
+                        <li> <a href="https://kubsu.com" title="Подпись 2">Ссылка 2</a> </li>
+                        <li> <a href="https://kubsu.com" title="Подпись 3">Ссылка 3</a> </li>
+                    </ol>
+                </li>
+                <li> <a href="ftp://user:password@server.ru/file.zip">Ссылка на файл на сервере FTP с авторизацией</a> </li>
+            </ul>
+        </div>
+
+        <div id="table" class="container">
+            <h2 class="container-header">Таблица</h2>
+            <div class="table-wrapper">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Колонка 1</th>
+                            <th>Колонка 2</th>
+                            <th>Колонка 3</th>
+                            <th>Колонка 4</th>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Ячейки 11 и 12</td>
+                            <td>Ячейка 13</td>
+                            <td>Ячейка 14</td>
+                        </tr>
+                        <tr>
+                            <td>Ячейка 21</td>
+                            <td>Ячейка 22</td>
+                            <td>Ячейка 23</td>
+                            <td>Ячейка 24</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">Ячейки 31, 32, 33 и 34</td>
+                        </tr>
+                        <tr>
+                            <td>Ячейка 41</td>
+                            <td>Ячейка 42</td>
+                            <td>Ячейка 43</td>
+                            <td>Ячейка 44</td>
+                        </tr>
+                        <tr>
+                            <td>Ячейка 51</td>
+                            <td>Ячейка 52</td>
+                            <td>Ячейка 53</td>
+                            <td>Ячейка 54</td>
+                        </tr>
+                        <tr>
+                            <td>Ячейка 61</td>
+                            <td>Ячейка 62</td>
+                            <td colspan="2">Ячейки 63 и 64</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="form" class="container">
+            <h2 class="container-header">Форма для заполнения</h2>
+            <form>
+                <label>
+                    ФИО:
+                    <br>
+                    <input name="field-fio" placeholder="Фамилия Имя Отчество" pattern="^[A-Za-zА-Яа-яЁё]+(\s+[A-Za-zА-Яа-яЁё]+)+$" type="text" required>
+                </label>
+                <br>
+
+                <label>
+                    Номер телефона:
+                    <br>
+                    <input name="field-phone" placeholder="+7(999)123-45-67" type="tel" pattern="^\+7\d{10}$" required>
+                </label>
+                <br>
+
+                <label>
+                    Email:
+                    <br>
+                    <input name="field-email" placeholder="user@yandex.ru" type="email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
+                </label>
+                <br>
+
+                <label>
+                    Дата рождения:
+                    <br>
+                    <input name="field-date" value="2000-01-01" type="date" pattern="^\d{4}-\d{2}-\d{2}$" required>
+                </label>
+                <br>
+
+                Пол:
+                <label><input name="field-gender" type="radio" checked="checked">Мужской</label>
+                <label><input name="field-gender" type="radio">Женский</label>
+                <br>
+
+                <label>
+                    Любимые языки программирования:
+                    <br>
+                    <select name="field-language" multiple="multiple">
+                        <option value="Pascal">Pascal</option>
+                        <option value="C">C</option>
+                        <option value="C++">C++</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="PHP">PHP</option>
+                        <option value="Python">Python</option>
+                        <option value="Java">Java</option>
+                        <option value="Haskel">Haskel</option>
+                        <option value="Clojure">Clojure</option>
+                        <option value="Prolog">Prolog</option>
+                        <option value="Scala">Scala</option>
+                    </select>
+                </label>
+                <br>
+
+                <label>Обо мне:<br><textarea name="field-about" placeholder="Расскажите о себе"></textarea></label>
+                <br>
+
+                <label>С контрактом ознакомился<input name="field-contract" type="checkbox"></label>
+                <br>
+
+                <input id="button-submit" type="submit" value="Сохранить">
+            </form>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <span>&copy; Все права защищены 2026</span>
+    </footer>
+
+</body>

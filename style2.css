@@ -13,12 +13,6 @@ body {
     
     padding: 10px;
 }
-#header {
-    height: 120px;
-}
-#footer {
-    height: 40px;
-}
 
 #header-logo {
     float: left;
