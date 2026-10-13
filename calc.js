@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const plusButton = document.getElementById("calc-plus");
 
     function getQuantity() {
-        return parseInt(quantityInput.value, 10) || 0;
+        return Math.max(0, parseInt(quantityInput.value, 10) || 0);
     }
 
     function calculate() {
@@ -26,6 +26,10 @@ document.addEventListener("DOMContentLoaded", function () {
         resultBox.textContent = "";
     }
 
+    quantityInput.addEventListener("input", function () {
+        quantityInput.value = quantityInput.value.replace(/[^0-9]/g, "");
+        resultBox.textContent = "";
+    });
     button.addEventListener("click", calculate);
     minusButton.addEventListener("click", function () {
         changeQuantity(-1);
