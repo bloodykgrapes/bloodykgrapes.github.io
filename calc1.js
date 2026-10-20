@@ -10,37 +10,45 @@ document.addEventListener("DOMContentLoaded", function () {
     const minusButton = document.getElementById("calc-minus");
     const plusButton = document.getElementById("calc-plus");
 
-    function getQuantity() {
+    function getQuantity()
+    {
         return Math.max(0, parseInt(quantityInput.value, 10) || 0);
     }
 
-    function calculate() {
+    function calculate()
+    {
         const price = parseInt(productSelect.value, 10);
         const total = price * getQuantity();
 
         resultBox.textContent = "Стоимость заказа: " + total.toLocaleString("ru-RU") + " ₽";
     }
 
-    function changeQuantity(delta) {
+    function changeQuantity(delta)
+    {
         quantityInput.value = String(Math.max(0, getQuantity() + delta));
         resultBox.textContent = "";
     }
 
-    quantityInput.addEventListener("input", function () {
+    quantityInput.addEventListener("input", function ()
+    {
         quantityInput.value = quantityInput.value.replace(/[^0-9]/g, "");
         resultBox.textContent = "";
     });
     button.addEventListener("click", calculate);
-    minusButton.addEventListener("click", function () {
+    minusButton.addEventListener("click", function ()
+    {
         changeQuantity(-1);
     });
-    plusButton.addEventListener("click", function () {
+    plusButton.addEventListener("click", function ()
+    {
         changeQuantity(1);
     });
-    productSelect.addEventListener("change", function () {
+    productSelect.addEventListener("change", function ()
+    {
         resultBox.textContent = "";
     });
-    form.addEventListener("submit", function (event) {
+    form.addEventListener("submit", function (event)
+    {
         event.preventDefault();
         calculate();
     });
