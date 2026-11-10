@@ -7,8 +7,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const prevButton = document.getElementById("gallery-prev");
     const nextButton = document.getElementById("gallery-next");
     const pagerContainer = document.getElementById("gallery-pager");
+    const status = document.getElementById("gallery-status");
 
-    if (!track || slides.length === 0 || !pagerContainer) {
+    if (!track || slides.length === 0 || !pagerContainer || !prevButton || !nextButton) {
         return;
     }
 
@@ -19,12 +20,28 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function renderPager(totalPages) {
+        if (pagerContainer.children.length === totalPages) {
+            Array.from(pagerContainer.children).forEach(function (dot, index) {
+                dot.classList.toggle("active", index === currentIndex);
+                if (index === currentIndex) {
+                    dot.setAttribute("aria-current", "page");
+                } else {
+                    dot.removeAttribute("aria-current");
+                }
+            });
+            return;
+        }
+
         pagerContainer.innerHTML = "";
         for (let i = 0; i < totalPages; i++) {
             const dot = document.createElement("button");
             dot.type = "button";
             dot.className = "gallery-dot" + (i === currentIndex ? " active" : "");
             dot.setAttribute("aria-label", "Перейти на страницу " + (i + 1));
+            dot.setAttribute("aria-controls", "gallery-track");
+            if (i === currentIndex) {
+                dot.setAttribute("aria-current", "page");
+            }
             
             // Замыкание для сохранения индекса по клику
             dot.addEventListener("click", (function (index) {
@@ -53,6 +70,9 @@ document.addEventListener("DOMContentLoaded", function () {
         track.style.transform = "translateX(" + (-currentIndex * slideWidth) + "px)";
 
         renderPager(totalPages);
+        if (status) {
+            status.textContent = "Страница " + (currentIndex + 1) + " из " + totalPages;
+        }
     }
 
     prevButton.addEventListener("click", function () {

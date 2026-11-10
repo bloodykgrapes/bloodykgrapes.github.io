@@ -13,6 +13,7 @@
 
     <script src="/calc2.js" defer></script>
     <script src="/gallery.js" defer></script>
+    <script src="/animations7.js" defer></script>
 </head>
 
 <body class="d-flex flex-column min-vh-100">
@@ -27,6 +28,7 @@
                 <a href="#links" class="header-link nav-link text-center mb-2 mb-md-0 mr-md-2">Ссылки</a>
                 <a href="#table" class="header-link nav-link text-center mb-2 mb-md-0 mr-md-2">Таблица</a>
                 <a href="#calc" class="header-link nav-link text-center mb-2 mb-md-0 mr-md-2">Калькулятор</a>
+                <a href="#gallery" class="header-link nav-link text-center mb-2 mb-md-0 mr-md-2">Галерея</a>
                 <a href="#form" class="header-link nav-link text-center">Форма</a>
             </nav>
         </div>
@@ -184,7 +186,9 @@
                     <h2 class="h3">Галерея изображений</h2>
                     <div class="gallery-container position-relative overflow-hidden">
                         
-                        <button id="gallery-prev" class="btn btn-primary gallery-arrow gallery-prev" type="button" aria-label="Предыдущие изображения">&LeftArrow;</button>
+                        <button id="gallery-prev" class="btn btn-primary gallery-arrow gallery-prev" type="button" aria-label="Предыдущие изображения">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 6l-6 6 6 6"></path></svg>
+                        </button>
                         
                         <div class="gallery-track-wrap overflow-hidden">
                             <div id="gallery-track" class="gallery-track d-flex">
@@ -199,13 +203,15 @@
                             </div>
                         </div>
 
-                        <button id="gallery-next" class="btn btn-primary gallery-arrow gallery-next" type="button" aria-label="Следующие изображения">&RightArrow;</button>
+                        <button id="gallery-next" class="btn btn-primary gallery-arrow gallery-next" type="button" aria-label="Следующие изображения">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6"></path></svg>
+                        </button>
                     
                     </div>
 
-                    <div id="gallery-pager" class="gallery-pager d-flex justify-content-center align-items-center mt-3" aria-label="Пейджер галереи">
-                        
+                    <div id="gallery-pager" class="gallery-pager d-flex justify-content-center align-items-center mt-3" role="group" aria-label="Страницы галереи">
                     </div>
+                    <p id="gallery-status" class="gallery-status text-center mb-0 mt-2" role="status" aria-live="polite" aria-atomic="true"></p>
                 </div>
             </section>
 
