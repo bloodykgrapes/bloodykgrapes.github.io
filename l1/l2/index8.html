@@ -308,8 +308,8 @@
                     <input id="feedback-phone" class="form-control" name="phone" type="tel" autocomplete="tel" placeholder="+7 999 123-45-67" maxlength="30" pattern="\+?[0-9\s\(\).\-]{6,30}" required>
                 </div>
                 <div class="feedback-field feedback-wide">
-                    <label for="feedback-organization">Организация <span class="feedback-optional">(необязательно)</span></label>
-                    <input id="feedback-organization" class="form-control" name="organization" type="text" autocomplete="organization" placeholder="Название организации" maxlength="150">
+                    <label for="feedback-organization">Организациядз</label>
+                    <input id="feedback-organization" class="form-control" name="organization" type="text" autocomplete="organization" placeholder="Название организации" maxlength="150" required>
                 </div>
                 <div class="feedback-field feedback-wide feedback-message">
                     <label for="feedback-message">Сообщение</label>
@@ -321,7 +321,6 @@
                 <span>Согласен с политикой обработки персональных данных</span>
             </label>
             <button id="feedback-submit" class="btn btn-primary feedback-submit" type="submit">Отправить</button>
-            <p id="feedback-status" class="feedback-status" role="status" aria-live="polite" aria-atomic="true"></p>
         </form>
     </dialog>
 
